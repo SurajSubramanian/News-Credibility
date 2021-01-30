@@ -60,6 +60,8 @@ function colorChanger() {
           }
         }
       };
+
+      fake_ratio();
     }
   });
 }
@@ -83,5 +85,10 @@ function fake_ratio(){
       not_toxic += 1;
     }
   }
-  //return the 4 variables to html
+
+  chrome.runtime.sendMessage({
+    "total": fake + not_fake,
+    "fake": fake,
+    "toxic": toxic
+  });
 }
