@@ -3,6 +3,7 @@ Chrome extension to identify the credibility of news in the Internet
 
 - converts fake tweets to light blue
 - converts toxic tweets to light red
+- produces a summary report (in the form of charts - the percentage of fake and toxic tweets)
 
 ## Toxic comment classifier
 
