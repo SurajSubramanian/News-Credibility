@@ -1,7 +1,8 @@
 # News-Credibility
 Chrome extension to identify the credibility of news in the Internet
 
-[current output](https://drive.google.com/file/d/1U2RBIVDBGbWrOPP8p4Cd1B_KWFuzilcp/view?usp=sharing) (converts all tweets to red)
+- converts fake tweets to light blue
+- converts toxic tweets to light red
 
 ## Toxic comment classifier
 
