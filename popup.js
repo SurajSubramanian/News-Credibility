@@ -27,7 +27,7 @@ chrome.runtime.onMessage.addListener(function(msg) {
   function drawChart_toxictweets() {
       var data = google.visualization.arrayToDataTable([
         ['Toxic Tweets', 'Toxic Tweets per Day'],
-        ['Toxic Tweets', msg.fake],
+        ['Toxic Tweets', msg.toxic],
         ['Non-Toxic Tweets', (msg.total - msg.toxic)]
       ]);
 
