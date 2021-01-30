@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "News credibility",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
