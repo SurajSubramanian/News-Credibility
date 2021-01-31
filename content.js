@@ -59,7 +59,7 @@ function colorChanger() {
           var fields = resp.split("|");
           var fakeness = fields[0];
           var toxicity = fields.slice(1, fields.length);
-          if (toxicity.length > 1) {*/
+          if (toxicity.length > 1) {
             if(blurToxic) {
               tweet.setAttribute(
                 "style",
