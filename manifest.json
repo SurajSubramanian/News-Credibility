@@ -9,8 +9,13 @@
     }
   ],
   "browser_action": {
- 		"default_popup": "popup.html",
- 		"default_title": "News credibility"
-	},
+         "default_popup": "popup.html",
+         "default_title": "News credibility"
+    },
+  "icons": {
+    "16": "/logo/logo_16x16.png",
+    "48": "/logo/logo_48x48.png",
+    "128": "/logo/logo_128x128.png"
+  },
   "content_security_policy": "script-src 'self' https://www.gstatic.com/charts/loader.js https://www.gstatic.com/charts/49/loader.js https://www.gstatic.com/charts/49/js/jsapi_compiled_default_module.js https://www.gstatic.com/charts/49/js/jsapi_compiled_graphics_module.js https://www.gstatic.com/charts/49/js/jsapi_compiled_ui_module.js https://www.gstatic.com/charts/49/js/jsapi_compiled_corechart_module.js; object-src 'self'"
 }
