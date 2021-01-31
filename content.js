@@ -10,6 +10,7 @@ function xml2string(node) {
 
 var scanned_tweets = [];
 var scanned_results = [];
+var blurToxic = false;
 
 function colorChanger() {
   let tweets = document.querySelectorAll("article");
@@ -48,10 +49,18 @@ function colorChanger() {
           var fakeness = fields[0];
           var toxicity = fields.slice(1, fields.length);
           if (toxicity.length > 1) {
-            tweet.setAttribute(
-              "style",
-              "background-color: rgb(255, 134, 134);"
-            );
+            if(blurToxic) {
+              tweet.setAttribute(
+                "style",
+                "-webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px); background-color: rgb(255, 134, 134);"
+              );
+            }
+            else {
+              tweet.setAttribute(
+                "style",
+                "background-color: rgb(255, 134, 134);"
+              );
+            }
           } else if (fakeness == "fake") {
             tweet.setAttribute(
               "style",
@@ -65,6 +74,12 @@ function colorChanger() {
     }
   });
 }
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender) {
+    blurToxic = request.blurr;
+  }
+);
 
 let timer = setInterval(colorChanger, 2000);
 

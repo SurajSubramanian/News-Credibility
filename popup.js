@@ -43,12 +43,14 @@ chrome.runtime.onMessage.addListener(function(msg) {
   }
 });
 
-/*document.getElementById("toggle").addEventListener("click", displayToxic);
-
-function displayToxic() {
-  var toxic_chart = document.getElementById('piechart_3d_toxic');
-  var fake_chart = document.getElementById('piechart_3d_fake');
-
-  toxic_chart.style.display = 'block';
-  fake_chart.style.display = 'none';
-}*/
+var blurr_toggle = document.getElementById('blurrtoggle');
+blurr_toggle.addEventListener('change', function(event) {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    if(blurr_toggle.checked) {
+      chrome.tabs.sendMessage(tabs[0].id, {blurr: true});
+    }
+    else {
+      chrome.tabs.sendMessage(tabs[0].id, {blurr: false});
+    }
+  });
+});
