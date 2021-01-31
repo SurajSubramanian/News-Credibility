@@ -1,5 +1,5 @@
-# News-Credibility
-Chrome extension to identify the credibility of news in the Internet
+# Twitteristic
+Chrome extension to flag o
 
 - converts fake tweets to light blue
 - converts toxic tweets to light red
