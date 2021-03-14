@@ -1,7 +1,7 @@
 # Twitteristic
 
 ## Project page
-View it on Devpost : [Twitteristic | Devpost](https://github.com/SurajSubramanian/Twitteristic)
+View it on Devpost : [Twitteristic | Devpost](https://devpost.com/software/twitteristic)
 
 ## Description 
 Chrome extension to flag fake and toxic content in your twitter feed.
